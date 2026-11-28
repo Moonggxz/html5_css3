@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Exemplo de Forms</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>---- Escolha ----</option>
+                <optgroup label="Região Sudeste">
+                    <option value="mg">Minas Gerais</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                </optgroup>
+
+
+                <optgroup label="Região Nordeste">
+                    <option value="pi">Piauí</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="ma">Maranhão</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </div>
+
+
+        <div><label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+        </div> 
+        
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
